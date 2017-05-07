@@ -198,6 +198,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SecController.cs" />
+    <Compile Include="Controllers\thrdController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -245,7 +247,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -267,6 +268,18 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Pet.cshtml" />
+    <Content Include="Views\Home\Raise.cshtml" />
+    <Content Include="Views\Home\Talk.cshtml" />
+    <Content Include="Views\Home\Up.cshtml" />
+    <Content Include="Views\Home\Find.cshtml" />
+    <Content Include="Views\Home\Text.cshtml" />
+    <Content Include="Views\Sec\one.cshtml" />
+    <Content Include="Views\Sec\two.cshtml" />
+    <Content Include="Views\Sec\three.cshtml" />
+    <Content Include="Views\thrd\up1.cshtml" />
+    <Content Include="Views\thrd\up2.cshtml" />
+    <Content Include="Views\thrd\up3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

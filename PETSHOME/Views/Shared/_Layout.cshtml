@@ -7,29 +7,117 @@
     <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style type="text/css">
+        body {
+        padding-top:0px;
+            
+        }
+
+        .navi_head {
+            height: auto;
+            background-color: #459df5;
+        }
+
+        .navi_body {
+            overflow: hidden;
+            height: 50px;
+            background: rgba(36,97,158,0.9);
+            transition: height ease 0.5s;
+        }
+
+            .navi_body:hover {
+                height: 300px;
+            }
+
+        .navi_head > div > span {
+            width: 150px;
+            text-align: center;
+            height: 300px;
+            display: inline-block;
+            font-weight: bold;
+            color: #FFF;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+            .navi_head > div > span > p a {
+                color: #FFF;
+                text-decoration: none;
+            }
+
+                .navi_head > div > span > p a:hover {
+                    color: #FFF;
+                    text-decoration: underline;
+                }
+
+        .navi_title {
+            font-size: 16px;
+            line-height: 50px;
+            margin-top: 0;
+        }
+
+        .navi_head > div > span:hover {
+            background: rgba(100,100,100,0.2);
+        }
+    </style>
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <!--<div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("宠物之家Pet'sHOME", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                    <li>@Html.ActionLink("关于", "About", "Home")</li>
-                    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("宠物产品", "Pet", "Home")</li>
+                    <li>@Html.ActionLink("宠物寄养", "Raise", "Home")</li>
+                    <li>@Html.ActionLink("论坛交流", "Talke", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+    <div>-->
+        <div class="navi_body">
+            <div class="navi_head">
+                <div style="width:80%; margin-left:auto; margin-right:auto;">
+                    <span>
+                        <p class="navi_title">
+                            @Html.ActionLink("宠物之家", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        </p>
+                    </span>
+                    <span>
+                        <p class="navi_title">@Html.ActionLink("主页", "Index", "Home")</p>
+                    </span>
+                    <span>
+                        <p class="navi_title">@Html.ActionLink("宠物产品", "Pet", "Home")</p>
+                        <p><a>@Html.ActionLink("发布消息", "Up", "Home")</a></p>
+                        <p><a>@Html.ActionLink("查询消息", "Find", "Home")</a></p>
+                        <p><a>@Html.ActionLink("用户留言", "Text", "Home")</a></p>
+                    </span>
+                    <span>
+                        <p class="navi_title">@Html.ActionLink("健康体检", "Check", "Home")</p>
+                        <p><a>@Html.ActionLink("发布体检信息", "one", "Sec")</a></p>
+                        <p><a>@Html.ActionLink("预定体检信息", "two", "Sec")</a></p>
+                        <p><a>@Html.ActionLink("查询体检信息", "three", "Sec")</a></p>
+                    </span>
+                    <span>
+                        <p class="navi_title">@Html.ActionLink("宠物寄养", "Raise", "Home")</p>
+                        <p><a>@Html.ActionLink("发布寄养地信息", "up1", "thrd")</a></p>
+                        <p><a>@Html.ActionLink("查询寄养地信息", "up2", "thrd")</a></p>
+                        <p><a>@Html.ActionLink("查看寄养地公告", "up3", "thrd")</a></p>
+                    </span>
+                    <span>
+                        <p class="navi_title">@Html.ActionLink("生活交流", "Talk", "Home")</p>
+                    </span>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
